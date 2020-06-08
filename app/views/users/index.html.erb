@@ -6,6 +6,9 @@
         <span class="profile-link">
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span>
+        <button>
+          <%= friend_show_btn(user.id) %>
+        </button>
       </li>
     <% end %>
   </ul>

@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'hirb'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -44,7 +45,18 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec'
+  gem 'database_cleaner', '~> 1.8'
+  # Add support for rails Rspec
+  gem 'rspec-rails', '~> 4.0'
+  gem 'capybara', '~> 3.32'
+  gem 'selenium-webdriver', '~> 3.142'
+  gem 'rails-controller-testing', '~> 1.0'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
+
+  gem 'test-unit', '~> 3.3', '>= 3.3.5'
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper', '~> 2.1', '>= 2.1.1'
 end
 
 group :development do
