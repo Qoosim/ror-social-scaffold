@@ -29,4 +29,5 @@ class FriendshipsController < ApplicationController
     end
     redirect_back(fallback_location: root_path, alert: 'Friend request declined')
   end
+
 end

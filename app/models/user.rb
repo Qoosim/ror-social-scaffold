@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  has_many :friendships
+  has_many :friendships, dependent: :destroy
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
 
   # Users who requested to be friends (needed for notifications )
@@ -47,16 +47,8 @@ class User < ApplicationRecord
 
   # Users who have requested to be friends
   def friend_requests
-    inverse_friendships.map { |friendship| friendship.user if !friendship.confirmed }.compact
-  end
-
-  # Method to confirm a friend request
-  def confirm_friend(user)
-    friendship = inverse_friendships.find { |friendship|
-      friendship.user == user
-    }
-    friendship.confirmed = true
-    friendship.save
+    inverse_friendships.map { |friendship| 
+      friendship.user if !friendship.confirmed }.compact
   end
 
   # Method to check if a given user is a friend

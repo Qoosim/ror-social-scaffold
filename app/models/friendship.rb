@@ -4,6 +4,7 @@ class Friendship < ApplicationRecord
 
   # Confirms friendship
   def confirm_friend
+    second_row
     self.update_attributes(confirmed: true)
     Friendship.create!(friend_id: self.user_id,
                       user_id: self.friend_id, confirmed: true)
@@ -27,5 +28,4 @@ class Friendship < ApplicationRecord
     friendship&.delete
     inverse_friendship&.delete
   end
-
 end
