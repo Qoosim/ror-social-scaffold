@@ -17,5 +17,4 @@ class Friendship < ApplicationRecord
     friendship&.delete
     inverse_friendship&.delete
   end
-
 end
