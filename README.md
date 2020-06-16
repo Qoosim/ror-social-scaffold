@@ -23,7 +23,7 @@ List of Users Page
 
 * [Social Media App](https://dashboard.heroku.com/apps/shielded-reef-53699)
 
-## 🛠️ How to run
+## 🛠️ How to run the App
 
  - Prerequisites
 
