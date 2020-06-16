@@ -1,86 +1,102 @@
-# Scaffold for social media app with Ruby on Rails
+# 🔐 Social Media - Rolling My Own Social Media
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This project is part of series of projects to be completed by students of [Microverse](https://www.microverse.org/).
 
-## Built With
+In this project, I modified the forked repository <b><i>Social Media</i></b> in an way that a new user can create an account, sign in to his or her acount. A signed in user can view other users' posts, create posts, comment and likes on them. A user can send a friend request, cancel a friend request and confirm a friend request sent by another user.
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+***********
 
-## Live Demo
+## 💻 Previews
+Signup Page
+  ![Signup](previews/signup.png)
+Login Page
+  ![Login](previews/signin.png)
+Profile Page
+  ![Profile](previews/login_user.png)
+List of Users Page
+  ![All Users](previews/list_of_users.png)
 
-TBA
+## 🚚 Live Demo
 
+* [Social Media App](https://dashboard.heroku.com/apps/shielded-reef-53699)
 
-## Getting Started
+## 🛠️ How to run
 
-To get a local copy up and running follow these simple example steps.
+ - Prerequisites
 
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
+Ruby: 2.7.1
+Rails: 5.2.4
 Postgres: >=9.5
 
-### Setup
+- Install necessary gems with:
 
-Instal gems with:
+    ` bundle install `
 
-```
-bundle install
-```
+- Setup database with:
 
-Setup database with:
+   ` rails db:create `
+   ` rails db:migrate `
+   ` rails db:seed `
 
-```
-   rails db:create
-   rails db:migrate
-```
+- Start server with:
+    
+   ` rails server `
 
+Visit `http://localhost:3000/` in your browser to play around the app.
 
+## 🎉 Features
 
-### Usage
+* New Users can create an account
+* Users can log into the app
+* Not logged in users can't access any post
+* Logged in users can create new posts
+* logged in users can comment and like any post
+* Logged in users can send friend request to any user
+* Logged in users can accept or reject friend requests
+* Logged in users can cancel friend request sent
+* User profile shows posts created by the user
 
-Start server with:
+## 🛠️ Built With
 
-```
-    rails server
-```
+This project was built with Ruby on Rails
+* [Ruby](https://www.ruby-lang.org/en/) v2.7.1
+* [Rails](https://rubyonrails.org/) v5.2.4
 
-Open `http://localhost:3000/` in your browser.
+Additional gems used
+* Bootstrap v4.0
+* [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
+* [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+* [Capybara](https://github.com/teamcapybara/capybara)
 
-### Run tests
+## 🧪 Testing
 
-```
-    rpsec --format documentation
-```
+    ` rpsec `
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+* Rspec model testing done for validations and associations
+* Rspec controller testing for behaviour
+* Rspec - Capybara testing for features
 
-### Deployment
+## 🕹️ Contributions, Issues & Forking
 
-TBA
+If you have any issues setting up the project or you come across any unintended bugs or problems, please do submit an issue to the [Social Media](https://github.com/Qoosim/ror-social-scaffold/issues) page.
 
-## Authors
+If you want to make your own changes, modifications or improvements to this project, go ahead and Fork it!
+1. [Fork it](https://github.com/Qoosim/ror-social-scaffold/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
 
-TBA
+## 👨🏽‍💻 Author
+**Qoosim AbdulGhaniyy**
 
-## 🤝 Contributing
+- Github: [@Qoosim](https://github.com/Qoosim)
+- Twitter: [@qoosim_ayinde](https://twitter.com/qoosim_ayinde)
+- Linkedin: [qoosim_abdulghaniyy](https://www.linkedin.com/in/qoosim-abdulghaniyy)
 
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
-
-## Show your support
+## 🧴 Show Your Support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
 
 ## https://dashboard.heroku.com/apps/shielded-reef-53699
