@@ -2,7 +2,7 @@
 
 This project is part of series of projects to be completed by students of [Microverse](https://www.microverse.org/).
 
-In this project, I modified the forked repository <b><i>Social Media</i></b> in an way that a new user can create an account, sign in to his or her acount. A signed in user can view other users' posts, create posts, comment and likes on them. A user can send a friend request, cancel a friend request and confirm a friend request sent by another user.
+In this project, I modified the forked repository <b><i>Social Media</i></b> in a way that a new user can create an account, sign in to his or her acount. A signed in user can view other users' posts, create posts, comment and likes on them. A user can send a friend request, cancel a friend request and confirm a friend request sent by another user.
 
 ***********
 
@@ -16,7 +16,7 @@ Profile Page
 List of Users Page
   ![All Users](previews/list_of_users.png)
 
-## 🚚 Live Demo
+## 🚚 Live Demo 
 
 * [Social Media App](https://dashboard.heroku.com/apps/shielded-reef-53699)
 
@@ -34,9 +34,11 @@ Postgres: >=9.5
 
 - Setup database with:
 
-   ` rails db:create `
-   ` rails db:migrate `
-   ` rails db:seed `
+```
+    rails db:create
+    rails db:migrate
+    rails db:seed
+```
 
 - Start server with:
     
@@ -69,8 +71,9 @@ Additional gems used
 * [Capybara](https://github.com/teamcapybara/capybara)
 
 ## 🧪 Testing
-
-    ` rpsec `
+```
+    rpsec
+```
 
 * Rspec model testing done for validations and associations
 * Rspec controller testing for behaviour
@@ -98,5 +101,3 @@ If you want to make your own changes, modifications or improvements to this proj
 
 Give a ⭐️ if you like this project!
 
-
-## https://dashboard.heroku.com/apps/shielded-reef-53699
