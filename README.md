@@ -9,10 +9,13 @@ In this project, I modified the forked repository <b><i>Social Media</i></b> in 
 ## 💻 Previews
 Signup Page
   ![Signup](previews/signup.png)
+
 Login Page
   ![Login](previews/signin.png)
+
 Profile Page
   ![Profile](previews/login_user.png)
+
 List of Users Page
   ![All Users](previews/list_of_users.png)
 
@@ -29,9 +32,9 @@ Rails: 5.2.4
 Postgres: >=9.5
 
 - Install necessary gems with:
-
-    ` bundle install `
-
+``` 
+    bundle install
+```
 - Setup database with:
 
 ```
@@ -42,7 +45,9 @@ Postgres: >=9.5
 
 - Start server with:
     
-   ` rails server `
+```
+    rails server
+```
 
 Visit `http://localhost:3000/` in your browser to play around the app.
 
@@ -100,4 +105,3 @@ If you want to make your own changes, modifications or improvements to this proj
 ## 🧴 Show Your Support
 
 Give a ⭐️ if you like this project!
-
