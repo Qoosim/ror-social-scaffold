@@ -4,12 +4,15 @@
       <%= link_to post.user.name, user_path(post.user), class: 'post-author' %>
     </div>
     <div class='post-liking'>
-      <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
-      <%= like_or_dislike_btn(post) %>
+      <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>&nbsp;
+      <%= "#{post.likes.count}" %> <%= like_or_dislike_btn(post) %>
     </div>
   </div>
   <p class="post-content">
     <%= post.content %>
+  </p>
+  <p>
+    <%= "#{post.comments.count} #{"Comment".pluralize(post.comments.count)}" %>
   </p>
 
   <div class='post-comments-section'>
