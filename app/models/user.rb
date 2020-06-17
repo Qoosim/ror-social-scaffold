@@ -34,13 +34,10 @@ class User < ApplicationRecord
     friends_array = friendships.map { |friendship| 
       friendship.friend if friendship.confirmed
     }
-
-    friends_array + inverse_friendships.map { |friendship| 
+    friends_array = inverse_friendships.map { |friendship| 
       friendship.user if friendship.confirmed
     }
-
     friends_array.compact
-
   end
 
   # Users who have yet to confirm friend requests

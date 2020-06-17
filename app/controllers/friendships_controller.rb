@@ -27,7 +27,7 @@ class FriendshipsController < ApplicationController
       friendship = Friendship.find_by(user_id: params[:user_id], friend_id: params[:friend_id])
       friendship.destroy_friendship
     end
-    redirect_back(fallback_location: root_path, aler: 'Friend request declined')
+    redirect_back(fallback_location: root_path, alert: 'Friend request declined')
   end
 
 end
