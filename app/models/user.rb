@@ -30,25 +30,9 @@ class User < ApplicationRecord
     Post.where(user: (self.friend + self))
   end
 
-  def friends
-    friends_array = friendships.map { |friendship| 
-      friendship.friend if friendship.confirmed
-    }
-    friends_array = inverse_friendships.map { |friendship| 
-      friendship.user if friendship.confirmed
-    }
-    friends_array.compact
-  end
-
   # Users who have yet to confirm friend requests
   def pending_friend?(user)
     friend_requests.include?(user)
-  end
-
-  # Users who have requested to be friends
-  def friend_requests
-    inverse_friendships.map { |friendship| 
-      friendship.user if !friendship.confirmed }.compact
   end
 
   # Method to check if a given user is a friend

@@ -22,7 +22,7 @@
             <%= link_to "Friend Request: #{current_user.friend_requests.count}", friendships_path, class: '#' %>
           </li>
           <li class="right-items login-show">
-            <%= link_to 'My Profile', user_path(current_user), class: '#' %>
+            <%= link_to current_user.name, user_path(current_user), class: '#' %>
           </li>
           <li class="right-items login-show">
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
