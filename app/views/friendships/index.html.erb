@@ -4,7 +4,7 @@
 
   <% @friend_requests.each do |friendship| %>
     <% unless friendship.confirmed %>
-      <h1><% "#{friendship.user.name} want to connect with you" %></h1>
+      <h1><%= "#{friendship.user.name} want to be your friend" %></h1>
       <button type="button">
         <%= confirm_btn friendship %>
       </button>

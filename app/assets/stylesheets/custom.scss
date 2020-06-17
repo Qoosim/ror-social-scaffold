@@ -1,3 +1,5 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
 $primary-color-dark: #689f38;
@@ -11,6 +13,52 @@ $divider-color: #bdbdbd;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+}
+
+.shadow {
+  box-shadow: 1px 1px 4px #333;
+  margin-bottom: -1px;
+}
+
+.left ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  padding-right: 30px;
+}
+
+.left-items {
+  font-size: 2rem;
+}
+
+.right-items {
+  font-size: 2rem;
+}
+
+.left, .right {
+  padding-top: 10px;
+}
+
+.new-comer:not(:last-child) {
+  margin-left: 270px;
+}
+
+.left-items:not(:first-child) {
+  margin-right: 80px;
+}
+
+.login-show:not(:last-child) {
+  margin-right: -20px;
 }
 
 body {

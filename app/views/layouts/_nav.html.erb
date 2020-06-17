@@ -1,0 +1,41 @@
+<nav class="fixed-top navbar navbar-expand-lg navbar-light shadow" style="background-color: #dcdcdc;">
+
+  <div class="row">
+    <div class="col-md-3 left">
+      <ul>
+        <% if current_user %>
+          <li class="menu-item left-items">
+            <%= link_to 'Timeline', posts_path, class: '#' %>
+          </li>
+          <li class="menu-item left-items">
+            <%= link_to 'All Users', users_path, class: '#' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-5">
+    </div>
+    <div class="col-md-4 right">
+      <ul>
+        <% if current_user %>
+          <li class="right-items login-show">
+            <%= link_to "Friend Request: #{current_user.friend_requests.count}", friendships_path, class: '#' %>
+          </li>
+          <li class="right-items login-show">
+            <%= link_to 'My Profile', user_path(current_user), class: '#' %>
+          </li>
+          <li class="right-items login-show">
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li class="right-items new-comer">
+            <%= link_to 'Sign in', user_session_path, class: '#' %>
+          </li>
+          <li class="right-items new-comer">
+            <%= link_to 'Register', new_user_registration_path, class: '#' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
