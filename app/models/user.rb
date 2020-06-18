@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   # Users who requested to be friends (needed for notifications )
   has_many :inverted_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
-  has_many :friend_requests, through: :inverted_friendships, source: :friend
+  has_many :friend_requests, through: :inverted_friendships
 
   # Users who need to confirm friendship
   has_many :pending_friendships, class_name: 'Friendship', foreign_key: 'user_id'
