@@ -1,14 +1,14 @@
-<nav class="fixed-top navbar navbar-expand-lg navbar-light shadow" style="background-color: #FFD700;">
+<nav class="fixed-top navbar navbar-expand-lg navbar-light shadow" style="background-color: #DAA520">
 
   <div class="row">
     <div class="col-md-3 left">
       <ul>
         <% if current_user %>
-          <li class="menu-item left-items">
-            <%= link_to 'Timeline', posts_path, class: '#' %>
+          <li class="left-items">
+            <%= link_to 'Timeline', posts_path, class: 'nav-link' %>
           </li>
-          <li class="menu-item left-items">
-            <%= link_to 'All Users', users_path, class: '#' %>
+          <li class="left-items">
+            <%= link_to 'All Users', users_path, class: 'nav-link' %>
           </li>
         <% end %>
       </ul>
@@ -19,20 +19,20 @@
       <ul>
         <% if current_user %>
           <li class="right-items login-show">
-            <%= link_to "Friend Request: #{current_user.friend_requests.count}", friendships_path, class: '#' %>
+            <%= link_to "Friend Request: #{current_user.friend_requests.count}", friendships_path, class: 'nav-link' %>
           </li>
           <li class="right-items login-show">
-            <%= link_to current_user.name, user_path(current_user), class: '#' %>
+            <%= link_to current_user.name, user_path(current_user), class: 'nav-link' %>
           </li>
           <li class="right-items login-show">
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'%>
           </li>
         <% else %>
           <li class="right-items new-comer">
-            <%= link_to 'Sign in', user_session_path, class: '#' %>
+            <%= link_to 'Sign in', user_session_path, class: 'nav-link' %>
           </li>
           <li class="right-items new-comer">
-            <%= link_to 'Register', new_user_registration_path, class: '#' %>
+            <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
           </li>
         <% end %>
       </ul>
