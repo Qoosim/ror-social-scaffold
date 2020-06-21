@@ -1,12 +1,20 @@
-<section class="user-section">
-  <h2><%= "Name: #{@user.name}" %></h2>
-  <button>
-    <%= friend_show_btn if @user != current_user %>
-  </button>
-  <article class="timeline">
-    <h3>Recent posts:</h3>
-    <ul class="posts">
-      <%= render @posts %>
-    </ul>
-  </article>
-</section>
+<div class="container">
+  <section class="row">
+    <div class="col-lg-1 circle"><%= current_user.name %></div>
+    <div class="col-lg-6 user-page">
+      <h2><%= "#{@user.name}'s Page" %></h2>
+    </div>
+    <div class="col-lg-5">
+      <button>
+        <%= friend_btn_show if @user != current_user %>
+      </button>
+    </div>
+  </section>
+  <se>
+    <article class="timeline">
+      <h3>Recent posts:</h3>
+      <ul class="posts">
+        <%= render @posts %>
+      </ul>
+    </article>
+  </se>
