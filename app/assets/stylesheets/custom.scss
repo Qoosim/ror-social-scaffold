@@ -293,6 +293,12 @@ body {
   text-shadow: 1px 1px #daa520;
 }
 
+.user-posts {
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
 .post-liking {
   margin-left: 120px;
 }
@@ -320,6 +326,19 @@ body {
   font-size: 5rem;
   font-family: 'Allerta', sans-serif;
   font-style: italic;
+}
+
+.btn-frq {
+  width: 40%;
+  padding: 15px;
+}
+
+.timeline h3 {
+  font-size: 4rem;
+  font-family: 'Allerta', sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px #daa520;
+  margin-bottom: 50px;
 }
 
 form {

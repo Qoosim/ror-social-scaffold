@@ -5,16 +5,21 @@
       <h2><%= "#{@user.name}'s Page" %></h2>
     </div>
     <div class="col-lg-5">
-      <button>
+      <button type="button" class="btn btn-frq">
         <%= friend_btn_show if @user != current_user %>
       </button>
     </div>
   </section>
-  <se>
-    <article class="timeline">
-      <h3>Recent posts:</h3>
-      <ul class="posts">
-        <%= render @posts %>
-      </ul>
-    </article>
-  </se>
+  <section class="row user-posts">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <article class="timeline">
+        <h3>All your Posts</h3>
+        <ul class="posts">
+          <%= render @posts %>
+        </ul>
+      </article>
+    </div>
+    <div class="col-lg-1"></div>
+  </section>
+</div>
