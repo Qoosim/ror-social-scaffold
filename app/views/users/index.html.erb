@@ -1,15 +1,20 @@
-<section class="users-section">
-  <ul class="users-list">
-    <% @users.each do |user| %>
-      <li>
-        Name: <%= user.name %>
-        <span class="profile-link">
-          <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-        </span>
-        <button>
-          <%= friend_show_btn(user.id) %>
-        </button>
-      </li>
-    <% end %>
-  </ul>
-</section>
+<div class="container">
+  <h1 class="all-users">All Users</h1>
+  <div class="row users-section">
+    <div class="col-lg-1"></div>
+    <ul class="col-lg-10 users-list">
+      <% @users.each do |user| %>
+        <li class="info-list">
+          <h2><%= user.name %></h2>
+          <span class="profile-link">
+            <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+          </span>
+          <button class="frd-rqst">
+            <%= friend_show_btn(user.id) %>
+          </button>
+        </li>
+      <% end %>
+    </ul>
+    <div class="col-lg-1">
+  </div>
+</div>

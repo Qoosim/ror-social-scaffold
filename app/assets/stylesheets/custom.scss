@@ -21,7 +21,7 @@ $divider-color: #bdbdbd;
 body {
   background: #e7d6aa;
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Allerta', sans-serif;
   font-weight: 400;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .new-comer:not(:last-child) {
-  margin-left: 270px;
+  margin-left: 250px;
 }
 
 .left-items:not(:first-child) {
@@ -85,6 +85,7 @@ body {
   font-size: 26px;
   font-family: 'Allerta', sans-serif;;
   font-style: italic;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -167,6 +168,7 @@ body {
 
 .notice,
 .alert {
+  margin-top: 50px;
   margin-bottom: 8px;
   width: 100%;
   height: 40px;
@@ -191,6 +193,7 @@ body {
 
 .sign-form {
   background: #fff;
+  margin-top: 50px;
   padding-bottom: 50px;
   border-radius: 5px;
   box-shadow: 2px 4px 4px #333;
@@ -215,23 +218,23 @@ body {
 .global h2 {
   font-size: 5rem;
   font-family: 'Raleway', sans-serif;
-  color: #daa520;
-  text-shadow: 2px 2px #000;
+  color: #000;
+  text-shadow: 2px 2px #daa520;
   font-style: italic;
-  margin-top: 8rem;
+  margin-top: 15rem;
 }
 
 .user-timeline {
   text-align: center;
   text-shadow: 2px 2px #daa520;
-  margin-top: -20px;
+  margin-top: 30px;
 }
 
 .circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin-top: 8px;
+  margin-top: 28px;
   margin-left: 110px;
   background: #daa520;
   display: flex;
@@ -283,6 +286,12 @@ body {
 
 .post-author {
   font-size: 22px;
+  color: #daa520;
+  font-family: 'Allerta', sans-serif;
+}
+
+.likes {
+  color: #daa520;
 }
 
 .users-posts {
@@ -297,6 +306,7 @@ body {
   background: #fff;
   margin-top: 50px;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 .post-liking {
@@ -326,12 +336,13 @@ body {
   font-size: 5rem;
   font-family: 'Allerta', sans-serif;
   font-style: italic;
+  margin-top: 20px;
 }
 
-.btn-frq {
-  width: 40%;
-  padding: 15px;
-}
+// .btn-frq {
+//   width: 40%;
+//   padding: 15px;
+// }
 
 .timeline h3 {
   font-size: 4rem;
@@ -339,6 +350,53 @@ body {
   text-align: center;
   text-shadow: 1px 1px #daa520;
   margin-bottom: 50px;
+}
+
+.frq-list h1 {
+  text-align: center;
+  text-shadow: 2px 2px #daa520;
+}
+
+.users-section {
+  background: #fff;
+  list-style: none;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.all-users {
+  text-align: center;
+  text-shadow: 2px 2px #daa520;
+}
+
+.users-list {
+  margin-bottom: 50px;
+  list-style: none;
+}
+
+.info-list {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.profile-link {
+  font-size: 2rem;
+  color: #daa520;
+}
+
+.profile-link,
+.frd-rqst {
+  margin-left: 20px;
+}
+
+.frd-rqst {
+  font-size: 1.8rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #e7d6aa;
+  color: #fff;
 }
 
 form {
