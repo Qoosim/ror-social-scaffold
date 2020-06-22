@@ -8,16 +8,22 @@ In this project, I modified the forked repository <b><i>Social Media</i></b> in 
 
 ## 💻 Previews
 Signup Page
-  ![Signup](previews/signup.png)
+  ![Signup](previews/signup_page.png)
 
 Login Page
-  ![Login](previews/signin.png)
+  ![Login](previews/login_page.png)
 
-Profile Page
-  ![Profile](previews/login_user.png)
+Current User Page
+  ![Current](previews/current_user_page.png)
 
-List of Users Page
-  ![All Users](previews/list_of_users.png)
+User Timeline Page
+  ![User Timeline](previews/user_timeline.png)
+
+Not Current User Page
+  ![Not Current](previews/not_current_user_profile.png)
+
+All Users Page
+  ![All Users](previews/all_users.png)
 
 ## 🚚 Live Demo 
 
