@@ -4,10 +4,12 @@ class Friendship < ApplicationRecord
 
   # Confirms friendship
   def confirm_friend
-    self.update_attributes(confirmed: true)
-    Friendship.create!(friend_id: self.user_id,
-                      user_id: self.friend_id, confirmed: true)
-
+    update_attributes(confirmed: true)
+    Friendship.create!(
+      friend_id: user_id,
+      user_id: friend_id,
+      confirmed: true
+    )
   end
 
   def friendship_exists?(user_id, friend_id)
