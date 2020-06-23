@@ -1,17 +1,16 @@
 class FriendshipsController < ApplicationController
-
   def create
     @friend = User.find(params[:friend_id] ||= params[:index_id])
     if current_user.friendships.build(friend_id: @friend.id).save
       redirect_back(fallback_location: root_path, notice: 'Friend request sent')
     else
-      redirect_to current_user, alert: 'Friend Request Not Sent'
+      redirect_to(current_user, alert: 'Friend Request Not Sent')
     end
   end
 
   def index
-    @friendships = current_user.friendships
-    @friend_requests = current_user.inverse_friendships
+    @friendships = current_user.friends
+    @friend_requests = current_user.friend_requests
   end
 
   def confirm
@@ -29,5 +28,4 @@ class FriendshipsController < ApplicationController
     end
     redirect_back(fallback_location: root_path, alert: 'Friend request declined')
   end
-
 end

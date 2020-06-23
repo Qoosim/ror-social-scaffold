@@ -1,19 +1,35 @@
-<%= form_for(@post) do |form| %>
-  <%= form.label :content %>
-  <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
-  <% if @post.errors.full_messages.any? %>
-    <p class="errors">
-      <%= "Post could not be saved. #{@post.errors.full_messages.join('. ')}" %>
-    </p>
-  <% end %>
-  <%= form.submit 'Save', class: 'btn btn-primary' %>
-<% end %>
-
-<article class="timeline">
-  <h3>
-    Recent posts
-  </h3>
-  <ul class="posts">
-    <%= render @timeline_posts %>
-  </ul>
-</article>
+<div class="container">
+  <h1 class="user-timeline">Stay Connected</h1>
+  <div class="row user-bg">
+    <div class="col-lg-2">
+      <div class="circle"><%= current_user.name %></div>
+    </div>
+    
+    <div class="col-lg-10 share">
+      <h2>Hey <%= current_user.name %>, share your thought!</h2>
+      <%= form_for(@post) do |form| %>
+        <%= form.label :content, class: 'b-content' %>
+        <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
+        <% if @post.errors.full_messages.any? %>
+          <p class="errors">
+            <%= "Post could not be saved. #{@post.errors.full_messages.join('. ')}" %>
+          </p>
+        <% end %>
+        <%= form.submit 'Post', class: 'btn save-btn' %>
+      <% end %>
+    </div>
+    <div class="col-lg-2">
+    </div>
+  </div>
+  <div class="row all-bg">
+    <h3 class="users-posts">Recent posts</h3>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <article class="timeline">
+        <ul class="posts">
+          <%= render @timeline_posts %>
+        </ul>
+      </article>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
