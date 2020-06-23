@@ -25,9 +25,7 @@ class User < ApplicationRecord
   # Find user friends only by user_id from friendship table 
   has_many :confirmed_friendships, -> { where confirmed: true }, class_name: 'Friendship'
   has_many :friends, through: :confirmed_friendships #class_name: 'Friendship'
-
-  has_many :friends, -> { where(friendships: { confirmed: true }) }, through: :friendships, source: :friend
-  
+    
 
   def friends_and_own_posts
     Post.where(user: (self.friend + self))
