@@ -27,7 +27,7 @@ All Users Page
 
 ## 🚚 Live Demo 
 
-* [Social Media App](https://dashboard.heroku.com/apps/shielded-reef-53699)
+* [Social Media App](https://so-me-app.herokuapp.com)
 
 ## 🛠️ How to run the App
 
