@@ -10,7 +10,6 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-
   has_many :friendships, foreign_key: 'user_id', dependent: :destroy
   # has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
 
@@ -38,7 +37,7 @@ class User < ApplicationRecord
 
   # Users who have requested to be friends
   def friend_requests
-    inverted_friendships.map { |friendship| 
+    inverted_friendships.map { |friendship|
       friendship.user if !friendship.confirmed }.compact
   end
 
