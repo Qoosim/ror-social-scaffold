@@ -29,7 +29,10 @@ module FriendshipsHelper
     else
       link_to(
         'Send friend request',
-        user_friendships_path(user_id: current_user, friend_id: params[:index_id]),
+        user_friendships_path(
+          user_id: current_user,
+          friend_id: params[:index_id] ||= params[:id]
+        ),
         method: :post
       )
     end

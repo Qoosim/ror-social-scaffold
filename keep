@@ -161,3 +161,11 @@ end
     return if Friendship.friendship.exists?(friend.friend_id, friend.user_id)
     Friendship.create(user_id: friend.friend_id, friend_id: friend.user_id)
   end
+
+   class << self
+
+    def friendship_exists?(user_id, friend_id)
+      Friendship.where(user_id: user_id, friend_id: friend_id).exists?
+    end
+
+  end

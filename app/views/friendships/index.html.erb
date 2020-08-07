@@ -4,17 +4,18 @@
       <h1>Friend Requests</h1>
     </div>
   </div>
-  <div class="row">
+  <div class="row connect-container">
     <% @friend_requests.each do |friendship| %>
       <% unless friendship.confirmed %>
-        <h1><%= "#{friendship.user.name} want to be your friend" %></h1>
-        <button type="button">
-          <%= confirm_btn friendship %>
-        </button>
-        <button type="button">
-          <%= decline_btn friendship %>
-        </button>
+        <h1 class="connect-info"><%= "#{friendship.user.name} want to be your friend" %></h1>
+        <div class="btn-accept-reject">
+          <button type="button" class="btn-confirm">
+            <%= confirm_btn friendship %>
+          </button>
+          <button type="button" class="btn-decline">
+            <%= decline_btn friendship %>
+          </button>
+        </div>
       <% end %>
     <% end %>
-
 </div>

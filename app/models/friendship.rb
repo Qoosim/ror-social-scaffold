@@ -12,15 +12,11 @@ class Friendship < ApplicationRecord
     )
   end
 
-  def friendship_exists?(user_id, friend_id)
-    Friendship.where(user_id: user_id, friend_id: friend_id).exists?
-  end
-
   # Destroy friendship on friended users
   def destroy_friendship
     friendship = Friendship.where(user_id: user_id, friend_id: friend_id).take
-    inverse_friendship = Friendship.where(user_id: friend_id, friend_id: user_id).take
+    inverted_friendships = Friendship.where(user_id: friend_id, friend_id: user_id).take
     friendship&.delete
-    inverse_friendship&.delete
+    inverted_friendships&.delete
   end
 end

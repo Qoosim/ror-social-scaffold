@@ -338,6 +338,37 @@ body {
   color: #fff;
 }
 
+.connect-container {
+  background: #fff;
+  border-radius: 10px;
+  padding-bottom: 50px;
+}
+
+.connect-info {
+  text-align: center;
+}
+
+.btn-accept-reject {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-confirm,
+.btn-decline {
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-confirm {
+  background: #DAF7A6;
+}
+
+.btn-decline {
+  background: #FF5733;
+  margin-left: 10px;
+}
+
 form {
   width: 80%;
   margin: 8px 0;

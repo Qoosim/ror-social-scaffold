@@ -10,7 +10,7 @@ class FriendshipsController < ApplicationController
 
   def index
     @friendships = current_user.friends
-    @friend_requests = current_user.friend_requests
+    @friend_requests = current_user.inverted_friendships
   end
 
   def confirm
